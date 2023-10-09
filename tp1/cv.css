@@ -1,0 +1,21 @@
+@media only screen and (max-width: 600px) {
+    body {
+        background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+    }
+}
+body {
+    background-color: gray;
+  }
+  table {background-color: #ffffff;
+  color: white;}
+table, th , td {color: rgb(0, 0, 0)}
+a:hover {
+    background-color: orange;}
+  tr:nth-child(odd){color:blue}
+  tr:hover { background-color: yellow;}
+  image {
+    width: 100%;
+    height: auto;} 
+
+      image:hover .overlay {
+        transform: scale(1);}
