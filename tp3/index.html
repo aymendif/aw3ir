@@ -11,7 +11,8 @@
 
 <body>
     <div class="container">
-        <h3>Ajouter un contact</h3>
+        <h3>TP AW</h3>
+        <h6>Avec Bootstrap 5</h6>
         <form method="POST" action="#" onsubmit="return validate()">
             <div class="row mb-3">
                 <label for="nom" class="col-sm-2 col-form-label">Nom</label>
@@ -33,51 +34,19 @@
             </div>
             <div class="row mb-3">
                 <label for="adresse" class="col-sm-2 col-form-label">Adresse</label>
-                <div class="col-sm-8">
-                    <input type="text" class="form-control" id="adresse" onkeyup="calculateChars(this)">
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="adresse">
                 </div>
-                <div class="col-sm-2">
-                    <button type="button" onclick="getLocation()" class="btn btn-warning"><img src="imgs/gps.png"
-                            alt="gps" width="32px" height="32px"> GPS</button>
-                    <span id="adr-chars">0</span> car.
-                </div>
-                <div id="map"></div>
             </div>
             <div class="row mb-3">
                 <label for="email" class="col-sm-2 col-form-label">Email</label>
-                <div class="col-sm-9">
-                    <input type="email" class="form-control" id="email" onkeyup="calculateChars(this)">
+                <div class="col-sm-10">
+                    <input type="email" class="form-control" id="email">
                 </div>
-
             </div>
-            <button type="submit" class="btn btn-primary">Ajouter</button>
+
+            <button type="submit" class="btn btn-primary">Valider</button>
         </form>
-
-    </div>
-
-    <br>
-    <div class="alert alert-success" id="added-msg" hidden>Contact ajouté avec succès</div>
-    <div class="alert alert-danger" id="reset-msg" hidden>Liste des contacts supprimé.</div>
-    <div class="row">
-        <h3>Liste des contacts (<span id="contacts-number"></span>) <button class="btn btn-primary" type="button"
-                onclick="contactStore.reset()">Reset</button></h3>
-        <div class="col-md-12">
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th>Nom</th>
-                        <th>Prénom</th>
-                        <th>Date de naissance</th>
-                        <th>Adresse</th>
-                        <th>Mail</th>
-                    </tr>
-                </thead>
-                <tbody>
-
-                </tbody>
-            </table>
-        </div>
-    </div>
     </div>
 
 
@@ -107,10 +76,9 @@
                 <div class="modal-body">
                     Vous êtes nés le <span id="target-birthday"></span> et vous habitez
                     <br>
-                    <a href="#" id="target-map-url"><img id="target-map-img" src="" alt="map" width="300px"
-                            height="300px">
-                        <br>
-                        <span id="target-address"></span>
+                    <a href="#" id="target-map-url"><img id="target-map-img" src="" alt="map" width="300px" height="300px"> 
+                    <br>
+                    <span id="target-address"></span>
                     </a>
                 </div>
                 <div class="modal-footer">
@@ -123,8 +91,6 @@
 
     <!-- my scripts are here -->
     <script src="js/form-validation.js"></script>
-    <script src="js/gps.js"></script>
-    <script src="js/store.js"></script>
 </body>
 
 </html>
